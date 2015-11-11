@@ -1,4 +1,4 @@
-package jpa;
+package dao.jpa;
 
 import java.util.List;
 
@@ -12,8 +12,9 @@ public class BandaDaoImp implements BandaDao {
 
 	private EntityManager em;
 
-	public BandaDaoImp() {
-		this.em = EM.getLocalEm();
+	
+	public BandaDaoImp(EntityManager em) {
+		this.em = em;
 	}
 
 	@Override
@@ -44,4 +45,5 @@ public class BandaDaoImp implements BandaDao {
 	}
 
 }
+
 
