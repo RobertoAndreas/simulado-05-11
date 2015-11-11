@@ -5,14 +5,14 @@ import jpa.EspetaculoDaoImp;
 import jpa.ParticipacaoDaoImp;
 
 public class DaoFactory {
-public static BandaDao criarArtistaDao() {
-return new BandaDaoImp(conn);
+public static BandaDao criarBandaDao() {
+return new BandaDaoImp(EM.get());
 }
-public static EspetaculoDao criarAlbumDao() {
+public static EspetaculoDao criarEspetaculoDao() {
 return new EspetaculoDaoImp(EM.get());
 }
-public static ParticipacaoDao criarMusicaDao() {
-return new MusicaDaoImp(EM.get());
+public static ParticipacaoDao criarParticipacaoDao() {
+return new ParticipacaoDaoImp(EM.get());
 }
 }
 
