@@ -1,4 +1,4 @@
-package jpa;
+package dao.jpa;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ public class EspetaculoDaoImp implements EspetaculoDao {
 
 	private EntityManager em;
 
-	public EspetaculoDaoImp() {
-		this.em = EM.getLocalEm();
+	public EspetaculoDaoImp(EntityManager em) {
+		this.em = em;
 	}
 
 	@Override
