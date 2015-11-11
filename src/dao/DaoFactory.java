@@ -7,13 +7,12 @@ import dao.jpa.ParticipacaoDaoImp;
 public class DaoFactory {
 	
 public static BandaDao criarBandaDao() {
-return new BandaDaoImp();
+return new BandaDaoImp(EM.get());
 }
 public static EspetaculoDao criarEspetaculoDao() {
-return new EspetaculoDaoImp();
+return new EspetaculoDaoImp(EM.get());
 }
 public static ParticipacaoDao criarParticipacaoDao() {
-return new ParticipacaoDaoImp();
+return new ParticipacaoDaoImp(EM.get());
 }
 }
-
