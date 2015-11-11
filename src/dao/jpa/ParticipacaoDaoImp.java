@@ -1,4 +1,4 @@
-package jpa;
+package dao.jpa;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ public class ParticipacaoDaoImp implements ParticipacaoDao {
 
 	private EntityManager em;
 
-	public ParticipacaoDaoImp() {
-		this.em = EM.getLocalEm();
+	public ParticipacaoDaoImp(EntityManager em) {
+		this.em = em;
 	}
 
 	@Override
